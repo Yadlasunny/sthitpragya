@@ -1,10 +1,10 @@
 import { ScrollReveal } from '../common/ScrollReveal';
 
-export const PortalsSection = () => {
+export const PortalsSection = ({ onPortalClick }: { onPortalClick?: (type: 'school' | 'student' | 'instructor' | 'contact') => void }) => {
   const portals = [
-    { title: 'Your School. Full Control.', body: 'Schedule instructor visits, monitor class and individual progress, download monthly reports, and see your school transform — from one dashboard.', features: ['Event Calendar', 'Class Progress View', 'Individual Reports', 'Progress Statements'], color: '#FFD700', cta: 'Register Your School →' },
-    { title: 'Their Platform. Their Growth.', body: 'An AI guide, a fitness tracker, a safe space, and a daily dose of inspiration. Everything a student needs — in their pocket.', features: ['Personal AI Guide', 'Diet & Fitness', 'Daily Content', 'Monthly Report'], color: '#7B2FFF', cta: 'Student Login →' },
-    { title: 'Walk In Prepared. Walk Out Impactful.', body: 'Know your students before you arrive. Gender-grouped activity lists, session logs, and real-time progress — all in one view.', features: ['Student Activity Lists', 'Gender Grouping', 'Session Logging', 'Live Tracking'], color: '#00C9A7', cta: 'Instructor Portal →' },
+    { title: 'Your School. Full Control.', body: 'Schedule instructor visits, monitor class and individual progress, download monthly reports, and see your school transform — from one dashboard.', features: ['Event Calendar', 'Class Progress View', 'Individual Reports', 'Progress Statements'], color: '#FFD700', cta: 'Register Your School →', type: 'school' as const },
+    { title: 'Their Platform. Their Growth.', body: 'An AI guide, a fitness tracker, a safe space, and a daily dose of inspiration. Everything a student needs — in their pocket.', features: ['Personal AI Guide', 'Diet & Fitness', 'Daily Content', 'Monthly Report'], color: '#7B2FFF', cta: 'Student Login →', type: 'student' as const },
+    { title: 'Walk In Prepared. Walk Out Impactful.', body: 'Know your students before you arrive. Gender-grouped activity lists, session logs, and real-time progress — all in one view.', features: ['Student Activity Lists', 'Gender Grouping', 'Session Logging', 'Live Tracking'], color: '#00C9A7', cta: 'Instructor Portal →', type: 'instructor' as const },
   ];
 
   return (
@@ -21,14 +21,14 @@ export const PortalsSection = () => {
               <div className="card" style={{ borderTop: `4px solid ${p.color}`, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <div>
                   <h3 className="font-display" style={{ fontSize: '1.5rem', marginBottom: '12px' }}>{p.title}</h3>
-                  <p style={{ color: 'var(--text-secondary)', marginBottom: '20px', lineHeight: 1.6 }}>{p.body}</p>
+                  <p style={{ color: 'var(--text-secondary)', marginBottom: '20px', lineHeight: 1.6, fontFamily: 'Inter' }}>{p.body}</p>
                   <ul style={{ listStyle: 'none', marginBottom: '20px' }}>
                     {p.features.map((f, j) => (
-                      <li key={j} style={{ marginBottom: '8px', color: 'var(--text-secondary)' }}>✓ {f}</li>
+                      <li key={j} style={{ marginBottom: '8px', color: 'var(--text-secondary)', fontFamily: 'Inter' }}>✓ {f}</li>
                     ))}
                   </ul>
                 </div>
-                <button className="btn-primary" style={{ width: '100%', textAlign: 'center' }}>{p.cta}</button>
+                <button onClick={() => onPortalClick?.(p.type)} className="btn-primary" style={{ width: '100%', textAlign: 'center' }}>{p.cta}</button>
               </div>
             </ScrollReveal>
           ))}

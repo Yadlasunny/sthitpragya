@@ -15,7 +15,7 @@ export const PlatformSection = () => {
       <div className="container">
         <ScrollReveal>
           <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <div style={{ color: 'var(--gradient-4)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '2px' }}>The Platform</div>
+            <div style={{ color: 'var(--gradient-4)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '2px', fontFamily: 'Inter' }}>The Platform</div>
             <h2 className="font-display gradient-text-violet-pink" style={{ fontSize: '3rem', marginBottom: '16px' }}>Six Tools. One Mission.<br />Total Student Growth.</h2>
           </div>
         </ScrollReveal>
@@ -25,8 +25,8 @@ export const PlatformSection = () => {
             <ScrollReveal key={i} delay={i * 100}>
               <div className="card" style={{ borderTop: `3px solid ${f.color}` }}>
                 <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>{f.icon}</div>
-                <h3 style={{ fontSize: '1.2rem', marginBottom: '12px', fontWeight: 600 }}>{f.title}</h3>
-                <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{f.desc}</p>
+                <h3 style={{ fontSize: '1.2rem', marginBottom: '12px', fontWeight: 600, fontFamily: 'Inter' }}>{f.title}</h3>
+                <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, fontFamily: 'Inter' }}>{f.desc}</p>
               </div>
             </ScrollReveal>
           ))}

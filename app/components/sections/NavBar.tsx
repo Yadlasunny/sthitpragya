@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-export const NavBar = () => {
+export const NavBar = ({ onRegisterClick }: { onRegisterClick?: () => void }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -34,13 +34,13 @@ export const NavBar = () => {
         
         {/* Desktop Menu */}
         <div style={{ display: 'flex', gap: '30px', alignItems: 'center' }} className="nav-desktop">
-          <a href="#method" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.95rem' }}>Our Method</a>
-          <a href="#platform" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.95rem' }}>Platform</a>
-          <a href="#schools" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.95rem' }}>For Schools</a>
-          <a href="#stats" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.95rem' }}>Results</a>
-          <a href="#contact" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.95rem' }}>Contact</a>
+          <a href="#method" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.95rem', fontFamily: 'Inter' }}>Our Method</a>
+          <a href="#platform" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.95rem', fontFamily: 'Inter' }}>Platform</a>
+          <a href="#schools" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.95rem', fontFamily: 'Inter' }}>For Schools</a>
+          <a href="#stats" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.95rem', fontFamily: 'Inter' }}>Results</a>
+          <a href="#contact" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.95rem', fontFamily: 'Inter' }}>Contact</a>
         </div>
-        <button className="btn-primary nav-desktop" style={{ fontSize: '0.9rem', padding: '12px 24px', whiteSpace: 'nowrap' }}>Register Your School →</button>
+        <button onClick={onRegisterClick} className="btn-primary nav-desktop" style={{ fontSize: '0.9rem', padding: '12px 24px', whiteSpace: 'nowrap' }}>Register Your School →</button>
         
         {/* Mobile Menu Button */}
         <button 
@@ -71,12 +71,15 @@ export const NavBar = () => {
           borderTop: '1px solid rgba(255, 255, 255, 0.07)',
           animation: 'slideDown 0.3s ease'
         }} className="nav-mobile-menu">
-          <a href="#method" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-secondary)', textDecoration: 'none', padding: '10px 0' }}>Our Method</a>
-          <a href="#platform" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-secondary)', textDecoration: 'none', padding: '10px 0' }}>Platform</a>
-          <a href="#schools" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-secondary)', textDecoration: 'none', padding: '10px 0' }}>For Schools</a>
-          <a href="#stats" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-secondary)', textDecoration: 'none', padding: '10px 0' }}>Results</a>
-          <a href="#contact" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-secondary)', textDecoration: 'none', padding: '10px 0' }}>Contact</a>
-          <button className="btn-primary" style={{ fontSize: '0.9rem', padding: '12px 24px', width: '100%', marginTop: '12px' }}>Register Your School →</button>
+          <a href="#method" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-secondary)', textDecoration: 'none', padding: '10px 0', fontFamily: 'Inter' }}>Our Method</a>
+          <a href="#platform" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-secondary)', textDecoration: 'none', padding: '10px 0', fontFamily: 'Inter' }}>Platform</a>
+          <a href="#schools" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-secondary)', textDecoration: 'none', padding: '10px 0', fontFamily: 'Inter' }}>For Schools</a>
+          <a href="#stats" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-secondary)', textDecoration: 'none', padding: '10px 0', fontFamily: 'Inter' }}>Results</a>
+          <a href="#contact" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-secondary)', textDecoration: 'none', padding: '10px 0', fontFamily: 'Inter' }}>Contact</a>
+          <button onClick={() => {
+            onRegisterClick?.();
+            setMobileMenuOpen(false);
+          }} className="btn-primary" style={{ fontSize: '0.9rem', padding: '12px 24px', width: '100%', marginTop: '12px' }}>Register Your School →</button>
         </div>
       )}
     </nav>

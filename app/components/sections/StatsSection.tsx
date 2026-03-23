@@ -13,7 +13,7 @@ export const StatsSection = () => {
             <ScrollReveal key={i} delay={i * 100}>
               <div>
                 <div style={{ fontSize: '3.5rem', fontWeight: 700, marginBottom: '12px', color: 'var(--gradient-4)' }}>{stat.num}</div>
-                <div style={{ fontSize: '1.1rem', color: 'var(--text-secondary)' }}>{stat.label}</div>
+                <div style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', fontFamily: 'Inter' }}>{stat.label}</div>
               </div>
             </ScrollReveal>
           ))}
@@ -21,10 +21,10 @@ export const StatsSection = () => {
 
         <ScrollReveal>
           <div style={{ maxWidth: '700px', margin: '0 auto', padding: '40px', background: 'rgba(12, 12, 29, 0.5)', borderRadius: '16px', borderLeft: '4px solid var(--gradient-4)' }}>
-            <p style={{ fontSize: '1.2rem', fontStyle: 'italic', marginBottom: '20px', lineHeight: 1.8 }}>
+            <p style={{ fontSize: '1.2rem', fontStyle: 'italic', marginBottom: '20px', lineHeight: 1.8, fontFamily: 'Inter' }}>
               "Sthitpragya changed how our students carry themselves. They walk taller, speak kinder, and push harder — not for marks, but for themselves."
             </p>
-            <p style={{ color: 'var(--text-secondary)', fontWeight: 600 }}>— Principal, Government High School</p>
+            <p style={{ color: 'var(--text-secondary)', fontWeight: 600, fontFamily: 'Inter' }}>— Principal, Government High School</p>
           </div>
         </ScrollReveal>
       </div>

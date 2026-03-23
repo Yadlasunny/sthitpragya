@@ -7,9 +7,9 @@ export const MethodSection = () => {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px', alignItems: 'center' }}>
           <ScrollReveal>
             <div>
-              <div style={{ color: 'var(--gradient-4)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '2px' }}>The Sthitpragya Method</div>
+              <div style={{ color: 'var(--gradient-4)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '2px', fontFamily: 'Inter' }}>The Sthitpragya Method</div>
               <h2 className="font-display" style={{ fontSize: '2.8rem', marginBottom: '20px', lineHeight: 1.1 }}>We Don't Send an App and Walk Away.</h2>
-              <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.8 }}>
+              <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.8, fontFamily: 'Inter' }}>
                 Our trained instructors personally visit your school. They sit with your students, run powerful activities, and build real relationships. Our platform then carries that work forward every single day — tracking, guiding, and growing each student individually.
               </p>
             </div>
@@ -28,8 +28,8 @@ export const MethodSection = () => {
                     {step.n}
                   </div>
                   <div>
-                    <h4 style={{ marginBottom: '4px', fontWeight: 600 }}>{step.icon} {step.title}</h4>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>{step.desc}</p>
+                    <h4 style={{ marginBottom: '4px', fontWeight: 600, fontFamily: 'Inter' }}>{step.icon} {step.title}</h4>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', fontFamily: 'Inter' }}>{step.desc}</p>
                   </div>
                 </div>
               ))}

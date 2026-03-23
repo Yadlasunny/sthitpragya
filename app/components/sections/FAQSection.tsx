@@ -27,11 +27,11 @@ export const FAQSection = () => {
             <ScrollReveal key={idx} delay={idx * 50}>
               <div className="card" style={{ marginBottom: '16px', cursor: 'pointer' }} onClick={() => setOpenIdx(openIdx === idx ? null : idx)}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <h4 style={{ fontSize: '1.05rem', fontWeight: 600, margin: 0 }}>{faq.q}</h4>
+                  <h4 style={{ fontSize: '1.05rem', fontWeight: 600, margin: 0, fontFamily: 'Inter' }}>{faq.q}</h4>
                   <span style={{ fontSize: '1.5rem', color: 'var(--gradient-4)' }}>{openIdx === idx ? '−' : '+'}</span>
                 </div>
                 {openIdx === idx && (
-                  <p style={{ marginTop: '16px', color: 'var(--text-secondary)', lineHeight: 1.7 }}>{faq.a}</p>
+                  <p style={{ marginTop: '16px', color: 'var(--text-secondary)', lineHeight: 1.7, fontFamily: 'Inter' }}>{faq.a}</p>
                 )}
               </div>
             </ScrollReveal>
