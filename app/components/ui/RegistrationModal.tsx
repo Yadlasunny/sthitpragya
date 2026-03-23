@@ -82,7 +82,7 @@ export const RegistrationModal = ({ isOpen, onClose, portalType = 'school' }: Re
     if (portalType === 'contact') {
       return (
         <div>
-          <h3 className="font-display" style={{ fontSize: 'clamp(1.3rem, 5vw, 1.5rem)', marginBottom: '12px', background: 'linear-gradient(135deg, #00C9A7, #FFD700)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Contact Us</h3>
+          <h3 className="font-display" style={{ fontSize: 'clamp(1.3rem, 5vw, 1.5rem)', marginBottom: '12px', background: 'linear-gradient(135deg, #7B2FFF, #FF3CAC)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Contact Us</h3>
           <p style={{ color: 'var(--text-secondary)', marginBottom: '20px', fontSize: 'clamp(0.9rem, 2vw, 1rem)' }}>Have questions? We'd love to hear from you. Fill out this form and we'll get back to you soon.</p>
           <form onSubmit={handleSubmit}>
             <input
