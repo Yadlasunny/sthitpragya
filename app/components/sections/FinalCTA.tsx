@@ -2,7 +2,7 @@ import { ScrollReveal } from '../common/ScrollReveal';
 
 export const FinalCTA = ({ onRegisterClick, onContactClick }: { onRegisterClick?: () => void; onContactClick?: () => void }) => {
   return (
-    <section className="section" style={{ background: 'linear-gradient(135deg, rgba(123, 47, 255, 0.2), rgba(255, 107, 0, 0.15), rgba(0, 201, 167, 0.15), rgba(255, 215, 0, 0.1))', textAlign: 'center' }}>
+    <section id="contact" className="section" style={{ background: 'linear-gradient(135deg, rgba(123, 47, 255, 0.2), rgba(255, 107, 0, 0.15), rgba(0, 201, 167, 0.15), rgba(255, 215, 0, 0.1))', textAlign: 'center' }}>
       <div className="container">
         <ScrollReveal>
           <div style={{ marginBottom: '24px' }}>

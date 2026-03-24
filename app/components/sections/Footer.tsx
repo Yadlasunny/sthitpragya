@@ -12,8 +12,13 @@ export const Footer = () => {
           <div>
             <h4 style={{ marginBottom: '12px', fontWeight: 600, fontFamily: 'Inter' }}>Quick Links</h4>
             <ul style={{ listStyle: 'none' }}>
-              {['Our Method', 'Platform', 'For Schools', 'Results'].map((link, i) => (
-                <li key={i} style={{ marginBottom: '8px' }}><a href="#" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontFamily: 'Inter' }}>{link}</a></li>
+              {[
+                { label: 'Our Method', href: '#method' },
+                { label: 'Platform', href: '#platform' },
+                { label: 'For Schools', href: '#schools' },
+                { label: 'Results', href: '#results' }
+              ].map((link, i) => (
+                <li key={i} style={{ marginBottom: '8px' }}><a href={link.href} style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontFamily: 'Inter' }}>{link.label}</a></li>
               ))}
             </ul>
           </div>
@@ -21,8 +26,12 @@ export const Footer = () => {
           <div>
             <h4 style={{ marginBottom: '12px', fontWeight: 600, fontFamily: 'Inter' }}>Legal</h4>
             <ul style={{ listStyle: 'none' }}>
-              {['Privacy Policy', 'Terms & Conditions', 'Contact'].map((link, i) => (
-                <li key={i} style={{ marginBottom: '8px' }}><a href="#" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontFamily: 'Inter' }}>{link}</a></li>
+              {[
+                { label: 'Privacy Policy', href: '#contact' },
+                { label: 'Terms & Conditions', href: '#contact' },
+                { label: 'Contact', href: '#contact' }
+              ].map((link, i) => (
+                <li key={i} style={{ marginBottom: '8px' }}><a href={link.href} style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontFamily: 'Inter' }}>{link.label}</a></li>
               ))}
             </ul>
           </div>
@@ -30,8 +39,12 @@ export const Footer = () => {
           <div>
             <h4 style={{ marginBottom: '12px', fontWeight: 600, fontFamily: 'Inter' }}>Follow Us</h4>
             <ul style={{ listStyle: 'none' }}>
-              {['Instagram', 'LinkedIn', 'WhatsApp'].map((link, i) => (
-                <li key={i} style={{ marginBottom: '8px' }}><a href="#" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontFamily: 'Inter' }}>{link}</a></li>
+              {[
+                { label: 'Instagram', href: 'https://instagram.com/sthitpragya' },
+                { label: 'LinkedIn', href: 'https://linkedin.com/company/sthitpragya' },
+                { label: 'WhatsApp', href: 'https://wa.me/919876543210' }
+              ].map((link, i) => (
+                <li key={i} style={{ marginBottom: '8px' }}><a href={link.href} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontFamily: 'Inter' }}>{link.label}</a></li>
               ))}
             </ul>
           </div>

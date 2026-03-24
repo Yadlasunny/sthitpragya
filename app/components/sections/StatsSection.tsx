@@ -2,7 +2,7 @@ import { ScrollReveal } from '../common/ScrollReveal';
 
 export const StatsSection = () => {
   return (
-    <section className="section" id="stats" style={{ background: 'linear-gradient(180deg, rgba(123, 47, 255, 0.1), transparent)', borderTop: '1px solid rgba(255, 215, 0, 0.1)' }}>
+    <section className="section" id="results" style={{ background: 'linear-gradient(180deg, rgba(123, 47, 255, 0.1), transparent)', borderTop: '1px solid rgba(255, 215, 0, 0.1)' }}>
       <div className="container" style={{ textAlign: 'center' }}>
         <ScrollReveal>
           <h2 className="font-display gradient-text-gold-saffron" style={{ fontSize: 'clamp(1.6rem, 8vw, 2.8rem)', marginBottom: '60px' }}>The Numbers Behind the Mission.</h2>
