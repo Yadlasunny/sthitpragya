@@ -27,9 +27,8 @@ export const NavBar = ({ onRegisterClick }: { onRegisterClick?: () => void }) =>
       borderBottom: isScrolled ? '1px solid rgba(255, 255, 255, 0.07)' : 'none'
     }}>
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '16px 20px' }}>
-        <div>
-          <h2 className="font-display gradient-text-gold-saffron" style={{ margin: 0, fontSize: 'clamp(18px, 5vw, 24px)' }}>Sthitpragya</h2>
-          <div style={{ fontSize: '8px', color: 'var(--gradient-4)', textAlign: 'center' }}>स्थितप्रज्ञ</div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <img src="/logo.png" alt="Sthitpragya" style={{ height: '50px', width: 'auto' }} />
         </div>
         
         {/* Desktop Menu */}
